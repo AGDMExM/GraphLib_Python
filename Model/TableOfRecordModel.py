@@ -74,8 +74,8 @@ class TableOfRecordModel:
             currRow = self._get_row_by_vertex_name(path[i])
             flag = False
 
-            for numNeighbor in range(0, len(currRow.numbersNeighborsVertex)):
-                if path[i + 1] == self.table[currRow.numbersNeighborsVertex[numNeighbor]].name:
+            for numChild in range(0, len(currRow.numbersChildVertex)):
+                if path[i + 1] == self.table[currRow.numbersChildVertex[numChild]].name:
                     flag = True
 
             if not flag:
