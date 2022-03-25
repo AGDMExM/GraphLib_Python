@@ -12,6 +12,7 @@ class EdgeModel:
     def _init(self, matrixModel):
         matrixModel: MatrixModel
         self.namesVertex = matrixModel.namesVertex.copy()
+        self.listOfEdges.clear()
 
         for row in range(0, len(matrixModel.matrix)):
             line = matrixModel.matrix[row]  # list<int>
