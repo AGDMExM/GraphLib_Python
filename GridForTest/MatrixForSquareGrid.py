@@ -18,7 +18,7 @@ def get_matrix_for_square_grid(sizeSquareMatrix, weightedGraph=False):
         resultMatrix.append(lst)
 
     if weightedGraph:
-        for idVertex in range(0, sizeSquareMatrix*sizeSquareMatrix - sizeSquareMatrix):
+        for idVertex in range(0, sizeSquareMatrix*sizeSquareMatrix - 1):
             r = idVertex / sizeSquareMatrix
             c = idVertex % sizeSquareMatrix
             if c < sizeSquareMatrix:
@@ -32,7 +32,7 @@ def get_matrix_for_square_grid(sizeSquareMatrix, weightedGraph=False):
                 resultMatrix[idVertex + sizeSquareMatrix][idVertex] = value
 
     if not weightedGraph:
-        for idVertex in range(0, sizeSquareMatrix*sizeSquareMatrix - sizeSquareMatrix):
+        for idVertex in range(0, sizeSquareMatrix*sizeSquareMatrix - 1):
             r = idVertex / sizeSquareMatrix
             c = idVertex % sizeSquareMatrix
             if c < sizeSquareMatrix:
