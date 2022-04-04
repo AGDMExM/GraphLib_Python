@@ -21,12 +21,12 @@ def get_matrix_for_square_grid(sizeSquareMatrix, weightedGraph=False):
         for idVertex in range(0, sizeSquareMatrix*sizeSquareMatrix - 1):
             r = idVertex / sizeSquareMatrix
             c = idVertex % sizeSquareMatrix
-            if c < sizeSquareMatrix:
+            if c < sizeSquareMatrix - 1:
                 value = random.randrange(0, 1000000)
                 resultMatrix[idVertex][idVertex + 1] = value
                 resultMatrix[idVertex + 1][idVertex] = value
 
-            if r < sizeSquareMatrix:
+            if r < sizeSquareMatrix - 1:
                 value = random.randrange(0, 1000000)
                 resultMatrix[idVertex][idVertex + sizeSquareMatrix] = value
                 resultMatrix[idVertex + sizeSquareMatrix][idVertex] = value
@@ -35,11 +35,11 @@ def get_matrix_for_square_grid(sizeSquareMatrix, weightedGraph=False):
         for idVertex in range(0, sizeSquareMatrix*sizeSquareMatrix - 1):
             r = idVertex / sizeSquareMatrix
             c = idVertex % sizeSquareMatrix
-            if c < sizeSquareMatrix:
+            if c < sizeSquareMatrix - 1:
                 resultMatrix[idVertex][idVertex + 1] = 1
                 resultMatrix[idVertex + 1][idVertex] = 1
 
-            if r < sizeSquareMatrix:
+            if r < sizeSquareMatrix - 1:
                 resultMatrix[idVertex][idVertex + sizeSquareMatrix] = 1
                 resultMatrix[idVertex + sizeSquareMatrix][idVertex] = 1
 
