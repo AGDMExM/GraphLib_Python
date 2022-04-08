@@ -21,7 +21,7 @@ class GraphLibCaAGM_Python:
         self.edgeModel = EdgeModel(self.matrixModel)
         self.tableOfRecordModel = TableOfRecordModel(self.matrixModel)
 
-    def create_image(self, directed_=True, layout="", highlightedEdges=None, highlightedColor="red"):
+    def create_image(self, directed_=True, layout="auto", highlightedEdges=None, highlightedColor="red"):
         """
         Save graph with name "graph"
         :param highlightedColor: Color for colored edges
